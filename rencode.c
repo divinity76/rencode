@@ -61,9 +61,11 @@ int main()
     {
         size_t i;
         int ret;
+        char buf[1337];
         for(i=0; i<encodings; ++i)
         {
-            printf("Encoding pass: %u",i);
+            snprintf(buf,1337,"title Encoding Pass %u",i+1);
+            system(buf);
             ret=system(command_1);
             if(ret!=0)
             {
